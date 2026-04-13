@@ -56,18 +56,18 @@ func FromEnv() Config {
 	couponFiles := [3]coupon.File{
 		{
 			URL:   getenv("COUPON_1_URL", "https://orderfoodonline-files.s3.ap-southeast-2.amazonaws.com/couponbase1.gz"),
-			GZ:    getenv("COUPON_1_GZ", "couponbase1.gz"),
-			Cache: getenv("COUPON_1_IDX", "couponbase1.idx"),
+			GZ:    getenv("COUPON_1_GZ", "coupon-data/couponbase1.gz"),
+			Cache: getenv("COUPON_1_IDX", "coupon-data/couponbase1.idx"),
 		},
 		{
 			URL:   getenv("COUPON_2_URL", "https://orderfoodonline-files.s3.ap-southeast-2.amazonaws.com/couponbase2.gz"),
-			GZ:    getenv("COUPON_2_GZ", "couponbase2.gz"),
-			Cache: getenv("COUPON_2_IDX", "couponbase2.idx"),
+			GZ:    getenv("COUPON_2_GZ", "coupon-data/couponbase2.gz"),
+			Cache: getenv("COUPON_2_IDX", "coupon-data/couponbase2.idx"),
 		},
 		{
 			URL:   getenv("COUPON_3_URL", "https://orderfoodonline-files.s3.ap-southeast-2.amazonaws.com/couponbase3.gz"),
-			GZ:    getenv("COUPON_3_GZ", "couponbase3.gz"),
-			Cache: getenv("COUPON_3_IDX", "couponbase3.idx"),
+			GZ:    getenv("COUPON_3_GZ", "coupon-data/couponbase3.gz"),
+			Cache: getenv("COUPON_3_IDX", "coupon-data/couponbase3.idx"),
 		},
 	}
 
