@@ -1,0 +1,34 @@
+# Full stack: API + static UI. Coupon corpora/cache are kept in local `coupon-data/`.
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-8080}:8080"
+    working_dir: /data
+    volumes:
+      - ./coupon-data:/data
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
+
+  swagger:
+    image: swaggerapi/swagger-ui:latest
+    ports:
+      - "8081:8080"
+    environment:
+      SWAGGER_JSON: /spec/openapi.yaml
+    volumes:
+      - ./api/openapi.yaml:/spec/openapi.yaml:ro
+    depends_on:
+      - api
+

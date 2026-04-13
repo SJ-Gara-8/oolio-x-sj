@@ -1,0 +1,18 @@
+# compiled binary
+food-ordering-api
+
+# coupon data files (large — downloaded at runtime)
+couponbase*.gz
+couponbase*.idx
+coupon-data/*.gz
+coupon-data/*.idx
+coupon-data/*.tmp
+
+# local overrides (committed `.env` holds demo defaults; use these for secrets / local-only)
+.env.local
+web/.env.local
+
+# frontend
+web/
+web/node_modules
+web/dist
