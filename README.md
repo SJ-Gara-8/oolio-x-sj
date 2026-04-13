@@ -59,6 +59,13 @@ go run ./cmd/server
 
 Server runs on `http://localhost:8080`.
 
+Server looks for coupon files in local folder `coupon-data/` `.
+So users can copy coupon files there first:
+
+- `coupon-data/couponbase1.gz`
+- `coupon-data/couponbase2.gz`
+- `coupon-data/couponbase3.gz`
+
 ## Test quickly with curl
 
 ```bash
